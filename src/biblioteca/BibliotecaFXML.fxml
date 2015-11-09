@@ -9,13 +9,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="642.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="biblioteca.BibliotecaFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="642.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.BibliotecaFXMLController">
    <children>
       <MenuBar prefHeight="29.0" prefWidth="642.0">
         <menus>
           <Menu text="Arquivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#nL" text="Novo Livro" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Editar">
