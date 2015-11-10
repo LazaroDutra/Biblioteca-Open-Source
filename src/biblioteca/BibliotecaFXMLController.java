@@ -32,7 +32,14 @@ public class BibliotecaFXMLController implements Initializable {
                 stage.setScene(new Scene(root1));  
                 stage.show();
     }
-    
+    @FXML
+    public void nA(ActionEvent na) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroAFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
 
     
     @Override

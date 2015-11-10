@@ -16,6 +16,7 @@
           <Menu text="Arquivo">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#nL" text="Novo Livro" />
+                  <MenuItem mnemonicParsing="false" onAction="#nA" text="Novo Aluno" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Editar">

@@ -13,8 +13,9 @@ public class Aluno {
     
     private String noAluno, nCpF, nTel;
     private int nMatricula;
+
     
-    public void Aluno(String noAluno, String nCpF, String nTel, int nMatricula ){
+    public  Aluno(String noAluno, String nCpF, String nTel, int nMatricula ){
         noAluno = this.noAluno;
         nCpF = this.nCpF;
         nTel = this.nTel;
@@ -51,6 +52,12 @@ public class Aluno {
 
     public void setnMatricula(int nMatricula) {
         this.nMatricula = nMatricula;
+    }
+     public void imprimeL(Aluno a){
+        System.out.println("Nome do Aluno: "+ a.getNoAluno());
+        System.out.println("C.P.F do Aluno: "+ a.getnCpF());
+        System.out.println("Telefone do Aluno:"+a.getnTel());
+        System.out.println("Matricula do Aluno"+a.getnMatricula());
     }
     
     

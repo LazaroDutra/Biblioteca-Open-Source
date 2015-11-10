@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.CadastroAFXMLController">
+   <children>
+      <Label layoutX="24.0" layoutY="16.0" text="Cadastro de Alunos">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeAluno" layoutX="27.0" layoutY="75.0" promptText="Insira o nome do Aluno" />
+      <TextField fx:id="cpfAluno" layoutX="27.0" layoutY="119.0" promptText="Insira o C.P.F do Aluno" />
+      <TextField fx:id="matriculaAluno" layoutX="199.0" layoutY="119.0" prefHeight="27.0" prefWidth="131.0" promptText="Matricula do Aluno" />
+      <TextField fx:id="telefoneAluno" layoutX="27.0" layoutY="165.0" promptText="Telefone do Aluno" />
+      <Label layoutX="27.0" layoutY="53.0" text="Nome do Aluno:" />
+      <Label layoutX="27.0" layoutY="102.0" text="C.P.F do Aluno:" />
+      <Label layoutX="27.0" layoutY="146.0" text="Telefone do Aluno:" />
+      <Label layoutX="199.0" layoutY="102.0" text="Matricula do Aluno:" />
+      <Label layoutX="225.0" layoutY="71.0" text="Open Source" />
+      <Label layoutX="256.0" layoutY="49.0" text="iblioteca" textFill="DODGERBLUE" />
+      <Label layoutX="222.0" layoutY="19.0" text="B" textFill="DODGERBLUE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="206.0" layoutY="165.0" mnemonicParsing="false" onAction="#cadA" text="Cadastrar Aluno" />
+   </children>
+</AnchorPane>

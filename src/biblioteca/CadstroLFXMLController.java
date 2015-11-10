@@ -42,7 +42,7 @@ public class CadstroLFXMLController implements Initializable {
     public void more(ActionEvent more ) {
        qtde = qtdeL.getText();
        val = Integer.parseInt(qtde);
-       val = val + 1;
+       val++;
        qtdeL.setText(null);
        qtdeL.setText(String.valueOf(val));
        System.out.println(val +"");
@@ -52,7 +52,7 @@ public class CadstroLFXMLController implements Initializable {
     public void less(ActionEvent less){
        qtde = qtdeL.getText();
        val = Integer.parseInt(qtde);
-       val = val - 1;
+       val--;
        if(val<0){
            val = 0;
        }
