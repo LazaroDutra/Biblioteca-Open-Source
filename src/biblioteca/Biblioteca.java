@@ -20,9 +20,9 @@ public class Biblioteca extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("BibliotecaFXML.fxml"));
-        
+        stage.setTitle("Biblioteca Open Source");
+        stage.setResizable(false);
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }

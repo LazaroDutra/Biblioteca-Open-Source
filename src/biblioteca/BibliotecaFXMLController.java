@@ -29,6 +29,8 @@ public class BibliotecaFXMLController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadstroLFXML.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
+                stage.setTitle("Novo Livro");
+                stage.setResizable(false);
                 stage.setScene(new Scene(root1));  
                 stage.show();
     }
@@ -37,6 +39,18 @@ public class BibliotecaFXMLController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroAFXML.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
+                stage.setTitle("Novo Aluno");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+    @FXML
+    public void nR(ActionEvent nr) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroR.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Novo Aluno");
+                stage.setResizable(false);
                 stage.setScene(new Scene(root1));  
                 stage.show();
     }

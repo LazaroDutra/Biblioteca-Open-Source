@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="281.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.CadastroRController">
+   <children>
+      <ImageView fitHeight="58.0" fitWidth="97.0" layoutX="25.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Biblioteca.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="135.0" layoutY="240.0" mnemonicParsing="false" onAction="#masktest" text="Cadastrar Aluno" />
+      <Label layoutX="211.0" layoutY="93.0" text="Matricula do Aluno:" />
+      <Label layoutX="206.0" layoutY="142.0" text="Autor do Livro:" />
+      <Label layoutX="26.0" layoutY="142.0" text="Título do Livro:" />
+      <Label layoutX="26.0" layoutY="93.0" text="Nome do Aluno:" />
+      <TextField layoutX="26.0" layoutY="115.0" promptText="Insira o nome do Aluno" />
+      <TextField layoutX="205.0" layoutY="115.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
+      <TextField layoutX="26.0" layoutY="159.0" promptText="Insira o Título do Livro" />
+      <TextField layoutX="203.0" layoutY="159.0" promptText="Insira o nome do Autor" />
+      <util.MaskTextField fx:id="datSaida" layoutX="26.0" layoutY="203.0" />
+      <util.MaskTextField fx:id="datEntrega" layoutX="205.0" layoutY="203.0" />
+      <Label layoutX="132.0" layoutY="29.0" text="Nova Reserva">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="186.0" text="Data da Saída:" />
+      <Label layoutX="205.0" layoutY="186.0" text="Data da Entrega:" />
+   </children>
+</AnchorPane>

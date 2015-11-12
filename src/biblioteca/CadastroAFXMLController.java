@@ -6,6 +6,8 @@
 package biblioteca;
 
 import java.net.URL;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,8 +51,28 @@ public class CadastroAFXMLController implements Initializable {
             a.setnCpF(cA);
             a.setnTel(tA);
             a.setnMatricula(Integer.parseInt(matriculaAluno.getText()));
+            
+            nomeAluno.setText(null);
+            cpfAluno.setText(null);
+            telefoneAluno.setText(null);
+            matriculaAluno.setText(null);
             a.imprimeL(a);
-        }catch(Exception e){}
+            ena(a);
+        }catch(NumberFormatException | SQLException e){}
+    }
+    
+    private static int ena(Aluno a) throws SQLException{
+            
+        try{
+            contest conn = new contest();
+            Statement insert = conn.conectar1().createStatement();
+            String in = "INSERT INTO aluno VALUES (NULL,'"+a.getnMatricula()+"','"+a.getNoAluno()+"','"+a.getnCpF()+"','"+a.getnTel()+"');";
+            
+            return(insert.executeUpdate(in));
+        }catch(SQLException e){
+            System.out.println("Problema com o SQL");
+        }
+        return 0;    
     }
     
     

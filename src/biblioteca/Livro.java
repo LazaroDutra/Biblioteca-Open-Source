@@ -12,12 +12,21 @@ package biblioteca;
 public class Livro {
     
     public String tiLivro, noAutor;
-    public int qtdeLivro;
+    public int qtdeLivro, ok;
 
     public Livro(String tiLivro, String noAutor, int qtdeLivro) {
         this.tiLivro = tiLivro;
         this.noAutor = noAutor;
         this.qtdeLivro = qtdeLivro;
+        this.ok = ok;
+    }
+
+    public int getOk() {
+        return ok;
+    }
+
+    public void setOk(int ok) {
+        this.ok = ok;
     }
 
     public String getTiLivro() {
