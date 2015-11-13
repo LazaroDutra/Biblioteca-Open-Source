@@ -67,7 +67,7 @@ public class CadstroLFXMLController implements Initializable {
      @FXML
     public void cadL(ActionEvent cad){
         try{
-            Livro l = new Livro("","",0);
+            Livro l = new Livro("","",0,1);
             String tL = nomeLivro.getText();
             String nA = nomeAutor.getText();
             int ok =Integer.parseInt(qtdeL.getText());
@@ -77,6 +77,7 @@ public class CadstroLFXMLController implements Initializable {
             if( ok!= 0){ok = 1;}
             l.setOk(ok);
             l.imprimeL(l);
+            l.adL(l);
             
             
             enl(l);

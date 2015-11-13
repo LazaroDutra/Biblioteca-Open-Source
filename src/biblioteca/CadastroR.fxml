@@ -15,15 +15,15 @@
             <Image url="@Biblioteca.png" />
          </image>
       </ImageView>
-      <Button layoutX="135.0" layoutY="240.0" mnemonicParsing="false" onAction="#masktest" text="Cadastrar Aluno" />
+      <Button layoutX="135.0" layoutY="240.0" mnemonicParsing="false" onAction="#res" text="Realizar Reserva" />
       <Label layoutX="211.0" layoutY="93.0" text="Matricula do Aluno:" />
       <Label layoutX="206.0" layoutY="142.0" text="Autor do Livro:" />
       <Label layoutX="26.0" layoutY="142.0" text="Título do Livro:" />
       <Label layoutX="26.0" layoutY="93.0" text="Nome do Aluno:" />
-      <TextField layoutX="26.0" layoutY="115.0" promptText="Insira o nome do Aluno" />
-      <TextField layoutX="205.0" layoutY="115.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
-      <TextField layoutX="26.0" layoutY="159.0" promptText="Insira o Título do Livro" />
-      <TextField layoutX="203.0" layoutY="159.0" promptText="Insira o nome do Autor" />
+      <TextField fx:id="nAluno" layoutX="26.0" layoutY="115.0" promptText="Insira o nome do Aluno" />
+      <TextField fx:id="mAluno" layoutX="205.0" layoutY="115.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
+      <TextField fx:id="tLivro" layoutX="26.0" layoutY="159.0" promptText="Insira o Título do Livro" />
+      <TextField fx:id="aLivro" layoutX="203.0" layoutY="159.0" promptText="Insira o nome do Autor" />
       <util.MaskTextField fx:id="datSaida" layoutX="26.0" layoutY="203.0" />
       <util.MaskTextField fx:id="datEntrega" layoutX="205.0" layoutY="203.0" />
       <Label layoutX="132.0" layoutY="29.0" text="Nova Reserva">
