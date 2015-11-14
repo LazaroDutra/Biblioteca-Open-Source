@@ -10,9 +10,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="642.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.BibliotecaFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="670.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.BibliotecaFXMLController">
    <children>
-      <MenuBar prefHeight="29.0" prefWidth="642.0">
+      <MenuBar prefHeight="29.0" prefWidth="670.0">
         <menus>
           <Menu text="Arquivo">
             <items>
@@ -31,8 +31,6 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Excluir Aluno" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Listar Alunos" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
                       <MenuItem mnemonicParsing="false" text="Modificar Aluno" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Procura por Aluno" />
@@ -43,8 +41,6 @@
                      <items>
                         <MenuItem mnemonicParsing="false" text="Excluir Livro" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Listar Livros" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Modificar Livro" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Procura por Livro" />
@@ -54,8 +50,6 @@
                   <Menu mnemonicParsing="false" text="Menu Reserva">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Excluir Reserva" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Listar Reservas" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Modificar Reserva" />
                         <SeparatorMenuItem mnemonicParsing="false" />
@@ -71,7 +65,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="131.0" layoutY="42.0" text="Biblioteca">
+      <Label layoutX="145.0" layoutY="42.0" text="Biblioteca">
          <font>
             <Font size="33.0" />
          </font>
@@ -84,7 +78,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="297.0" layoutY="42.0" text="Open Source">
+      <Label layoutX="311.0" layoutY="42.0" text="Open Source">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
@@ -97,7 +91,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Rectangle arcWidth="5.0" height="5.0" layoutY="94.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="642.0">
+      <Rectangle arcWidth="5.0" height="5.0" layoutY="94.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="670.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -108,18 +102,52 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <TableView fx:id="tabela" layoutY="138.0" prefHeight="331.0" prefWidth="642.0">
-        <columns>
-          <TableColumn fx:id="id" editable="false" prefWidth="60.0" text="ID" />
-          <TableColumn fx:id="titulo" editable="false" prefWidth="238.0" text="Título" />
-            <TableColumn fx:id="autor" editable="false" prefWidth="222.0" text="Autor" />
-            <TableColumn fx:id="qtde" editable="false" prefWidth="121.0" text="Qtde. Disponível " />
-        </columns>
-      </TableView>
       <Label layoutX="14.0" layoutY="108.0" text="Catálogo de Livros">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
+      <TabPane layoutY="134.0" prefHeight="337.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#adt" text="Catálogo de Livros">
+               <content>
+                  <TableView fx:id="tabela" prefHeight="331.0" prefWidth="642.0">
+                    <columns>
+                      <TableColumn fx:id="id" editable="false" prefWidth="60.0" text="ID" />
+                      <TableColumn fx:id="titulo" editable="false" prefWidth="260.0" text="Título" />
+                        <TableColumn fx:id="autor" editable="false" prefWidth="231.0" text="Autor" />
+                        <TableColumn fx:id="qtde" editable="false" prefWidth="119.0" text="Qtde. Disponível " />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+          <Tab onSelectionChanged="#adt" text="Catálogo de Alunos">
+               <content>
+                  <TableView fx:id="tabelaA" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="idaluno" editable="false" prefWidth="66.0" text="ID" />
+                      <TableColumn fx:id="nAluno" editable="false" prefWidth="179.0" text="Aluno" />
+                        <TableColumn fx:id="cpf" editable="false" prefWidth="172.0" text="C.P.F" />
+                        <TableColumn fx:id="mAluno" editable="false" prefWidth="132.0" text="Matricula" />
+                        <TableColumn fx:id="telefone" editable="false" prefWidth="121.0" text="Telefone" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab onSelectionChanged="#adt" text="Catálogo de Reservas">
+               <content>
+                  <TableView fx:id="tabelaR" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="idR" editable="false" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="idL" editable="false" prefWidth="171.0" text="Nome do Livro" />
+                        <TableColumn fx:id="Aluno" editable="false" prefWidth="136.0" text="Aluno" />
+                        <TableColumn fx:id="datSaida" editable="false" prefWidth="143.0" text="Data de Saída" />
+                        <TableColumn fx:id="datEntrega" editable="false" prefWidth="145.0" text="Data de Entrega" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

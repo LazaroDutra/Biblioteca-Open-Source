@@ -8,12 +8,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.CadstroLFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.CadstroLFXMLController">
    <children>
       <Button layoutX="226.0" layoutY="168.0" mnemonicParsing="false" onAction="#cadL" text="Cadastrar" />
       <TextField fx:id="nomeLivro" layoutX="13.0" layoutY="115.0" promptText="Insira o Título do Livro" />
       <TextField fx:id="nomeAutor" layoutX="13.0" layoutY="168.0" promptText="Insira o Nome do Autor" />
-      <util.MaskTextField fx:id="qtdeL" layoutX="200.0" layoutY="115.0" prefHeight="27.0" prefWidth="131.0" />
+      <util.MaskTextField fx:id="qtdeL" layoutX="200.0" layoutY="115.0" prefHeight="27.0" prefWidth="150.0" />
       <Label layoutX="13.0" layoutY="151.0" text="Nome do Autor:" />
       <Label layoutX="13.0" layoutY="98.0" text="Título do Livro:" />
       <Label layoutX="200.0" layoutY="98.0" text="Quantidade de Livros" />

@@ -48,15 +48,14 @@ public class CadastroAFXMLController implements Initializable {
             String cA = cpfAluno.getText();
             String tA = telefoneAluno.getText();
             a.setNoAluno(nA);
-            a.setnCpF(cA);
-            a.setnTel(tA);
-            a.setnMatricula(Integer.parseInt(matriculaAluno.getText()));
+            a.setCpf(cA);
+            a.setTelefone(tA);
+            a.setMatricula(Integer.parseInt(matriculaAluno.getText()));
             
             nomeAluno.setText(null);
             cpfAluno.setText(null);
             telefoneAluno.setText(null);
             matriculaAluno.setText(null);
-            a.imprimeL(a);
             ena(a);
         }catch(NumberFormatException | SQLException e){}
     }
@@ -66,7 +65,7 @@ public class CadastroAFXMLController implements Initializable {
         try{
             contest conn = new contest();
             Statement insert = conn.conectar1().createStatement();
-            String in = "INSERT INTO aluno VALUES (NULL,'"+a.getnMatricula()+"','"+a.getNoAluno()+"','"+a.getnCpF()+"','"+a.getnTel()+"');";
+            String in = "INSERT INTO aluno VALUES (NULL,'"+a.getMatricula()+"','"+a.getNoAluno()+"','"+a.getCpf()+"','"+a.getTelefone()+"');";
             
             return(insert.executeUpdate(in));
         }catch(SQLException e){

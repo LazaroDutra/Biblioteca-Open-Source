@@ -20,12 +20,10 @@
       <Label layoutX="206.0" layoutY="142.0" text="Autor do Livro:" />
       <Label layoutX="26.0" layoutY="142.0" text="Título do Livro:" />
       <Label layoutX="26.0" layoutY="93.0" text="Nome do Aluno:" />
-      <TextField fx:id="nAluno" layoutX="26.0" layoutY="115.0" promptText="Insira o nome do Aluno" />
-      <TextField fx:id="mAluno" layoutX="205.0" layoutY="115.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
+      <TextField fx:id="mAluno" layoutX="205.0" layoutY="115.0" onAction="#nal" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
+      <TextField fx:id="nAluno" disable="true" editable="false" layoutX="26.0" layoutY="115.0" promptText="Insira a  Matriclua  --&gt;&gt;" />
       <TextField fx:id="tLivro" layoutX="26.0" layoutY="159.0" promptText="Insira o Título do Livro" />
       <TextField fx:id="aLivro" layoutX="203.0" layoutY="159.0" promptText="Insira o nome do Autor" />
-      <util.MaskTextField fx:id="datSaida" layoutX="26.0" layoutY="203.0" />
-      <util.MaskTextField fx:id="datEntrega" layoutX="205.0" layoutY="203.0" />
       <Label layoutX="132.0" layoutY="29.0" text="Nova Reserva">
          <font>
             <Font name="System Bold" size="29.0" />
@@ -33,5 +31,7 @@
       </Label>
       <Label layoutX="26.0" layoutY="186.0" text="Data da Saída:" />
       <Label layoutX="205.0" layoutY="186.0" text="Data da Entrega:" />
+      <DatePicker fx:id="datSaida" layoutX="25.0" layoutY="203.0" prefHeight="27.0" prefWidth="167.0" />
+      <DatePicker fx:id="datEntrega" layoutX="205.0" layoutY="203.0" prefHeight="27.0" prefWidth="167.0" />
    </children>
 </AnchorPane>

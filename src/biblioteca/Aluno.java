@@ -5,61 +5,83 @@
  */
 package biblioteca;
 
+import java.util.ArrayList;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  *
  * @author Lazaro
  */
 public class Aluno {
     
-    private String noAluno, nCpF, nTel;
-    private int nMatricula;
+    private final SimpleIntegerProperty Idaluno = new SimpleIntegerProperty();
+    private final SimpleIntegerProperty matricula = new SimpleIntegerProperty();
+    private final SimpleStringProperty NoAluno = new SimpleStringProperty();
+    private final SimpleStringProperty cpf = new SimpleStringProperty();
+    private final SimpleStringProperty telefone = new SimpleStringProperty();
+    private final ArrayList <Aluno> Alunos;
 
-    
-    public  Aluno(String noAluno, String nCpF, String nTel, int nMatricula ){
-        noAluno = this.noAluno;
-        nCpF = this.nCpF;
-        nTel = this.nTel;
-        nMatricula = this.nMatricula; 
+    public Aluno (String NoAluno, String cpf,String telefone,int matricula) {
+        this.NoAluno.set(NoAluno);
+        this.cpf.set(cpf);
+        this.matricula.set(matricula);
+        this.telefone.set(telefone);
+        Alunos = new ArrayList();
+
+    }
+    public Aluno (int Idaluno, int matricula,String NoAluno, String cpf,String telefone) {
+        this.Idaluno.set(Idaluno);
+        this.matricula.set(matricula);
+        this.NoAluno.set(NoAluno);
+        this.cpf.set(cpf);
+        this.telefone.set(telefone);
+        Alunos = new ArrayList();
+    }
+
+   
+    public int getIdaluno() {
+        return Idaluno.get();
+    }
+
+    public void setIdaluno(int Idaluno) {
+        this.Idaluno.set(Idaluno);
     }
 
     public String getNoAluno() {
-        return noAluno;
+        return NoAluno.get();
     }
 
-    public void setNoAluno(String noAluno) {
-        this.noAluno = noAluno;
+    public void setNoAluno(String NoAluno) {
+        this.NoAluno.set(NoAluno);
     }
 
-    public String getnCpF() {
-        return nCpF;
+    public String getCpf() {
+        return cpf.get();
     }
 
-    public void setnCpF(String nCpF) {
-        this.nCpF = nCpF;
+    public void setCpf(String cpf) {
+        this.cpf.set(cpf);
     }
 
-    public String getnTel() {
-        return nTel;
+    public int getMatricula() {
+        return matricula.get();
     }
 
-    public void setnTel(String nTel) {
-        this.nTel = nTel;
+    public void setMatricula(int matricula) {
+        this.matricula.set(matricula);
+    }
+    public String getTelefone() {
+        return telefone.get();
     }
 
-    public int getnMatricula() {
-        return nMatricula;
+    public void setTelefone(String telefone) {
+        this.telefone.set(telefone);
     }
 
-    public void setnMatricula(int nMatricula) {
-        this.nMatricula = nMatricula;
-    }
-     public void imprimeL(Aluno a){
-        System.out.println("Nome do Aluno: "+ a.getNoAluno());
-        System.out.println("C.P.F do Aluno: "+ a.getnCpF());
-        System.out.println("Telefone do Aluno:"+a.getnTel());
-        System.out.println("Matricula do Aluno"+a.getnMatricula());
-    }
     
-    
-    
+    public void adL(Aluno a){
+        Alunos.add(a);
+    }
+   
 }

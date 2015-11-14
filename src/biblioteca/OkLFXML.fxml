@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="243.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.OkAFXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="243.0" stroke="TRANSPARENT" strokeType="INSIDE" width="445.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#0077ff2a" />
+                  <Stop color="#098f093c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="116.0" fitWidth="161.0" layoutX="142.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Biblioteca.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="40.0" layoutY="138.0" text="Livro registrado com sucesso!!!">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="ok" layoutX="205.0" layoutY="202.0" mnemonicParsing="false" onAction="#close" text="Ok" />
+   </children>
+</AnchorPane>
