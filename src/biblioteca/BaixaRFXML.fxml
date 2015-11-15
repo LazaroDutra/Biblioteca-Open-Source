@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="191.0" prefWidth="399.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="biblioteca.BaixaRFXMLController">
+    <children>
+      <Rectangle arcWidth="5.0" disable="true" fill="#dadada" height="98.0" layoutY="98.0" stroke="#8a8a8a" strokeLineJoin="BEVEL" strokeType="INSIDE" width="399.0" />
+      <Label layoutX="13.0" layoutY="105.0" text="Insira o ID da Reserva a ser excluida:" />
+      <Rectangle arcWidth="5.0" height="5.0" layoutY="83.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="399.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0099ff" />
+                  <Stop color="#105e17" offset="0.4916387959866221" />
+                  <Stop color="#03ff18" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="58.0" fitWidth="97.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Biblioteca.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="138.0" layoutY="28.0" text="Excluir Reserva">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="273.0" layoutY="155.0" mnemonicParsing="false" onAction="#ri" text="Excluir Reserva" />
+      <util.MaskTextField fx:id="idr" layoutX="14.0" layoutY="122.0" />
+   </children>
+</AnchorPane>

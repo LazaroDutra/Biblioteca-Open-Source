@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import util.MaskTextField;
@@ -78,7 +79,14 @@ public class CadstroLFXMLController implements Initializable {
             l.setOk(ok);
             l.imprimeL(l);
             l.adL(l);
-            
+             Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+             dialogoInfo.setTitle("Cadastrar Livro");
+             dialogoInfo.setHeaderText("Cadastro Concluido");
+             dialogoInfo.setContentText("Livro cadastrado com sucesso !!!");
+             dialogoInfo.showAndWait();
+             nomeLivro.setText(null);
+             nomeAutor.setText(null);
+             qtdeL.setText(null);
             
             enl(l);
         }catch(Exception e){}
@@ -89,6 +97,7 @@ public class CadstroLFXMLController implements Initializable {
              contest conn = new contest();
              Statement insert = conn.conectar1().createStatement();
              String in = "INSERT INTO livro VALUES (NULL,'"+l.getTiLivro()+"','"+l.getNoAutor()+"','"+l.getQtdeLivro()+"',"+l.getOk()+");";
+
              return(insert.executeUpdate(in));
            }catch(SQLException e){
                System.out.println("Problema com o SQL");

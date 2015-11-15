@@ -6,34 +6,32 @@
 package biblioteca;
 
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+import util.MaskTextField;
 
 /**
  * FXML Controller class
  *
  * @author Lazaro
  */
-public class OkAFXMLController implements Initializable {
+public class AlterarAFXMLController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-    @FXML
-    private Button ok;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
     }
-    
-    @FXML
-    private void close (ActionEvent ev){
-    Stage stage = (Stage) ok.getScene().getWindow();
-    stage.close();
-    }
+   
     
 }

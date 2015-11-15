@@ -16,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -56,7 +57,7 @@ public class CadastroRController implements Initializable {
 
     @FXML
     public int res() throws IOException{
-             Integer idr = 0, idI = 0, idA = 0;
+             Integer idr = 0, idI = 0, idA = 0, diSv = 0, qtde = 0;
 
              try{
              contest conn = new contest();
@@ -65,35 +66,60 @@ public class CadastroRController implements Initializable {
              Statement seItens = conn.conectar1().createStatement();
              Statement inItens = conn.conectar1().createStatement();
              Statement idres = conn.conectar1().createStatement();
+             Statement disV = conn.conectar1().createStatement();
+             Statement disS = conn.conectar1().createStatement();
+             
              ResultSet rs = select.executeQuery("Select idAluno From Aluno Where matriculaAluno = '"+mAluno.getText()+"';");
              while(rs.next()){
                  idA = rs.getInt("idAluno");
              }
 
-            ResultSet seI = seItens.executeQuery("Select idlivro From livro Where livro.nomelivro = '"+tLivro.getText()+"' and Livro.nomeautor = '"+aLivro.getText()+"'; ");
-            while(seI.next()){
+             ResultSet seI = seItens.executeQuery("Select idlivro From livro Where livro.nomelivro = '"+tLivro.getText()+"' and Livro.nomeautor = '"+aLivro.getText()+"'; ");
+             while(seI.next()){
                  idI = seI.getInt("idLivro");
              }
-           String in = "Insert into reserva Values (null, '"+idA.toString()+"','"+datSaida.getValue()+"', '"+datEntrega.getValue()+"');";
-           insert.executeUpdate(in);
-           ResultSet idR = idres.executeQuery("Select idreserva From reserva Where Reserva.idaluno = '"+idA.toString()+"' and Reserva.dataretirada = '"+datSaida.getValue()+"';");
+             ResultSet disv = disV.executeQuery("Select disponivel, qtdelivro from livro where idlivro = '"+idI.toString()+"';");
+             while(disv.next()){
+                 diSv = disv.getInt("disponivel");
+                 qtde = disv.getInt("qtdelivro");
+                 
+             }
+             if(diSv > 0){
+            String in = "Insert into reserva Values (null, '"+idA.toString()+"','"+datSaida.getValue()+"', '"+datEntrega.getValue()+"');";
+            insert.executeUpdate(in);
+            ResultSet idR = idres.executeQuery("Select idreserva From reserva Where Reserva.idaluno = '"+idA.toString()+"' and Reserva.dataretirada = '"+datSaida.getValue()+"';");
             while(idR.next()){
                  idr = idR.getInt("idreserva");
              }
-           String inI = "Insert into itens Values (null,'"+idI.toString()+"','"+idr.toString()+"');";
-
-           mAluno.setText(null);
-           tLivro.setText(null);
-           aLivro.setText(null);
-           datSaida.setValue(null);
-           datEntrega.setValue(null);
-           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OkRFXML.fxml"));
-           Parent root1 = (Parent) fxmlLoader.load();
-           Stage stage = new Stage();
-           stage.setScene(new Scene(root1));  
-           stage.initStyle(StageStyle.UNDECORATED);
-           stage.show();
-           return(inItens.executeUpdate(inI));
+            qtde --;
+            if(qtde == 0){
+                diSv =0;
+            }
+            String disset = "UPDATE `Livro` SET disponivel = '"+diSv.toString()+"', qtdelivro = '"+qtde.toString()+"' where idlivro = '"+idI.toString()+"'";
+            disS.executeUpdate(disset);
+            String inI = "Insert into itens Values (null,'"+idI.toString()+"','"+idr.toString()+"');";
+            
+           
+            Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+            dialogoInfo.setTitle("Realizar Reserva");
+            dialogoInfo.setHeaderText("Reserva realizada");
+            dialogoInfo.setContentText("Livro reservado com sucesso !!!");
+            dialogoInfo.showAndWait();
+            nAluno.setText(null);
+            mAluno.setText(null);
+            tLivro.setText(null);
+            aLivro.setText(null);
+            datSaida.setValue(null);
+            datEntrega.setValue(null);
+            
+            return(inItens.executeUpdate(inI));
+             }else{
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("Realizar Reserva");
+                dialogoInfo.setHeaderText("A Reserva não foi realizada");
+                dialogoInfo.setContentText("Livro indisponivel no momento");
+                dialogoInfo.showAndWait();
+             }
            }catch(SQLException e){
                System.out.println("Problema com o SQL"+ e);
            }

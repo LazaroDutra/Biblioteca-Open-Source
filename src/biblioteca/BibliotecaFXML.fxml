@@ -39,9 +39,7 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <Menu mnemonicParsing="false" text="Menu Livro">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Excluir Livro" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Modificar Livro" />
+                        <MenuItem mnemonicParsing="false" onAction="#alL" text="Modificar Livro" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Procura por Livro" />
                      </items>
@@ -49,11 +47,9 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <Menu mnemonicParsing="false" text="Menu Reserva">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Excluir Reserva" />
+                        <MenuItem mnemonicParsing="false" onAction="#alR" text="Excluir Reserva" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Modificar Reserva" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Procura por Reserva" />
+                        <MenuItem mnemonicParsing="false" onAction="#prR" text="Procura por Reserva" />
                     </items>
                   </Menu>
             </items>

@@ -32,7 +32,7 @@ import javafx.stage.Stage;
  * @author Lazaro
  */
 public class BibliotecaFXMLController implements Initializable {
-    
+    //Menu Arquivo
     @FXML
     public void nL(ActionEvent nl) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadstroLFXML.fxml"));
@@ -63,6 +63,57 @@ public class BibliotecaFXMLController implements Initializable {
                 stage.setScene(new Scene(root1));  
                 stage.show();
     }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    
+    //Menu Editar
+        //Menu Livro
+    @FXML
+    public void alL(ActionEvent na) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AlterarLFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Alterar Livro");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+    @FXML
+    public void prL(ActionEvent nr) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroR.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Procurar Livro");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+        ////////////
+        //Menu Reserva
+    @FXML
+    public void alR(ActionEvent alR) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BaixaRFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Alterar Livro");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+    @FXML
+    public void prR(ActionEvent prR) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProcurarRFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Procurar Livro");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+        /////////////
+        //Menu Aluno
+        ///////////
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    
     // Table de Livros
     @FXML
     private TableView <Livro> tabela;

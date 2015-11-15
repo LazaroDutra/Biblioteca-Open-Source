@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 /**
@@ -51,7 +52,11 @@ public class CadastroAFXMLController implements Initializable {
             a.setCpf(cA);
             a.setTelefone(tA);
             a.setMatricula(Integer.parseInt(matriculaAluno.getText()));
-            
+            Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+            dialogoInfo.setTitle("Cadastrar Aluno");
+            dialogoInfo.setHeaderText("Cadastro concluido");
+            dialogoInfo.setContentText("Aluno cadastrado com sucesso !!!");
+            dialogoInfo.showAndWait();
             nomeAluno.setText(null);
             cpfAluno.setText(null);
             telefoneAluno.setText(null);
