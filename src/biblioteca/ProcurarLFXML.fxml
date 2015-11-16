@@ -10,9 +10,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="biblioteca.ProcurarLFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.ProcurarLFXMLController">
          <children>
-      <Rectangle arcWidth="5.0" disable="true" fill="#dadada" height="161.0" layoutY="98.0" stroke="#8a8a8a" strokeLineJoin="BEVEL" strokeType="INSIDE" width="671.0" />
+      <Rectangle arcWidth="5.0" disable="true" fill="#dadada" height="96.0" layoutY="98.0" stroke="#8a8a8a" strokeLineJoin="BEVEL" strokeType="INSIDE" width="671.0" />
       <Rectangle arcWidth="5.0" height="6.0" layoutY="83.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="671.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
@@ -34,6 +34,18 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Button layoutX="398.0" layoutY="219.0" mnemonicParsing="false" text="Pesquisar Reserva" />
+      <TableView fx:id="tabela" layoutY="184.0" prefHeight="331.0" prefWidth="671.0">
+         <columns>
+            <TableColumn fx:id="id" editable="false" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="titulo" editable="false" prefWidth="260.0" text="Título" />
+            <TableColumn fx:id="autor" editable="false" prefWidth="231.0" text="Autor" />
+            <TableColumn fx:id="qtde" editable="false" prefWidth="119.0" text="Qtde. Disponível " />
+         </columns>
+      </TableView>
+      <TextField fx:id="tiLivro" layoutX="14.0" layoutY="128.0" />
+      <TextField fx:id="noAutor" layoutX="235.0" layoutY="128.0" />
+      <Button layoutX="437.0" layoutY="128.0" mnemonicParsing="false" onAction="#pl" text="Procurar" />
+      <Label layoutX="14.0" layoutY="111.0" text="Título do Livro:" />
+      <Label layoutX="235.0" layoutY="111.0" text="Nome do Autor:" />
    </children>
 </AnchorPane>

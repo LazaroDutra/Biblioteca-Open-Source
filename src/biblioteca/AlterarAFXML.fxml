@@ -10,17 +10,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="304.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.AlterarAFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="304.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.AlterarAFXMLController">
    <children>
-      <Rectangle arcWidth="5.0" disable="true" fill="#dadada" height="159.0" layoutY="145.0" stroke="#8a8a8a" strokeLineJoin="BEVEL" strokeType="INSIDE" width="399.0" />
-      <TextField layoutX="15.0" layoutY="111.0" />
-      <Button layoutX="188.0" layoutY="111.0" mnemonicParsing="false" text="Pesquisar" />
-      <TextField layoutX="15.0" layoutY="175.0" />
-      <TextField layoutX="15.0" layoutY="228.0" />
-      <TextField layoutX="217.0" layoutY="175.0" />
-      <TextField layoutX="217.0" layoutY="228.0" />
+      <Rectangle arcWidth="5.0" disable="true" fill="#dadada" height="159.0" layoutY="145.0" stroke="#8a8a8a" strokeLineJoin="BEVEL" strokeType="INSIDE" width="405.0" />
+      <TextField fx:id="mpAluno" layoutX="15.0" layoutY="111.0" prefHeight="27.0" prefWidth="182.0" promptText="Insira a  matricula do aluno" />
+      <Button layoutX="203.0" layoutY="111.0" mnemonicParsing="false" onAction="#pesq" text="Pesquisar" />
+      <TextField fx:id="noAluno" layoutX="15.0" layoutY="175.0" promptText="Nome do Aluno" />
+      <TextField fx:id="nuCPF" layoutX="15.0" layoutY="228.0" promptText="C.P.F do Aluno" />
+      <TextField fx:id="mAluno" layoutX="217.0" layoutY="175.0" promptText="Matricula do Aluno" />
+      <TextField fx:id="teAluno" layoutX="217.0" layoutY="228.0" promptText="Telefone do Aluno" />
       <Label layoutX="15.0" layoutY="94.0" text="Insira a Matricula do Aluno a ser alterado:" />
-      <Rectangle arcWidth="5.0" height="5.0" layoutY="83.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="399.0">
+      <Rectangle arcWidth="5.0" height="5.0" layoutY="83.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="405.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -45,7 +45,9 @@
       <Label layoutX="16.0" layoutY="211.0" text="C.P.F do Aluno" />
       <Label layoutX="217.0" layoutY="211.0" text="Telefone do Aluno:" />
       <Label layoutX="217.0" layoutY="158.0" text="Matriclua do Aluno" />
-      <Button layoutX="238.0" layoutY="263.0" mnemonicParsing="false" text="Salvar Alterações" />
-      <Button layoutX="282.0" layoutY="111.0" mnemonicParsing="false" text="Apagar Aluno" />
+      <Button layoutX="238.0" layoutY="263.0" mnemonicParsing="false" onAction="#sAl" text="Salvar Alterações" />
+      <Button layoutX="297.0" layoutY="111.0" mnemonicParsing="false" onAction="#exL" text="Apagar Aluno" />
+      <TextField fx:id="idR" layoutX="347.0" layoutY="46.0" prefHeight="27.0" prefWidth="35.0" visible="false" />
+      <TextField fx:id="idA" layoutX="347.0" layoutY="15.0" prefHeight="27.0" prefWidth="35.0" visible="false" />
    </children>
 </AnchorPane>

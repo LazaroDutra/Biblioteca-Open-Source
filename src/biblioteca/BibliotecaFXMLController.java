@@ -78,8 +78,8 @@ public class BibliotecaFXMLController implements Initializable {
                 stage.show();
     }
     @FXML
-    public void prL(ActionEvent nr) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroR.fxml"));
+    public void prL(ActionEvent prL) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProcurarLFXML.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setTitle("Procurar Livro");
@@ -111,7 +111,26 @@ public class BibliotecaFXMLController implements Initializable {
     }
         /////////////
         //Menu Aluno
-        ///////////
+     public void alA(ActionEvent alR) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AlterarAFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Alterar Aluno");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+    @FXML
+    public void prA(ActionEvent prR) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProcurarAFXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Procurar Aluno");
+                stage.setResizable(false);
+                stage.setScene(new Scene(root1));  
+                stage.show();
+    }
+     ///////////
     ///////////////////////////////////////////////////////////////////////////////////////////
     
     // Table de Livros
@@ -227,7 +246,7 @@ public class BibliotecaFXMLController implements Initializable {
                 Alunos.add(a);
             }
             
-            idaluno.setCellValueFactory(new PropertyValueFactory("Idaluno"));
+            idaluno.setCellValueFactory( new PropertyValueFactory("Idaluno"));
             mAluno.setCellValueFactory( new PropertyValueFactory("matricula"));
             nAluno.setCellValueFactory( new PropertyValueFactory("NoAluno"));
             telefone.setCellValueFactory( new PropertyValueFactory("telefone"));

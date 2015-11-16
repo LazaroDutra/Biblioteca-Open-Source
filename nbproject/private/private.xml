@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/Reserva.java</file>
             <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/BibliotecaFXMLController.java</file>
-            <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/CadastroRController.java</file>
+            <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/ProcurarAFXMLController.java</file>
+            <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/ProcurarAFXML.fxml</file>
+            <file>file:/Users/lazarodutra/Doctum/Biblioteca/src/biblioteca/AlterarAFXMLController.java</file>
         </group>
     </open-files>
 </project-private>
