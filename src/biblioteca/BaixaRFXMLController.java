@@ -69,7 +69,7 @@ public class BaixaRFXMLController implements Initializable {
          dialogoInfo.setHeaderText("Operação finalizada");
          dialogoInfo.setContentText("Reserva excluida com sucesso !!!");
          dialogoInfo.showAndWait();
-         idr.setText(null);
+         idr.setText("");
         }catch(SQLException e){}
     }
     

@@ -84,9 +84,9 @@ public class CadstroLFXMLController implements Initializable {
              dialogoInfo.setHeaderText("Cadastro Concluido");
              dialogoInfo.setContentText("Livro cadastrado com sucesso !!!");
              dialogoInfo.showAndWait();
-             nomeLivro.setText(null);
-             nomeAutor.setText(null);
-             qtdeL.setText(null);
+             nomeLivro.setText("");
+             nomeAutor.setText("");
+             qtdeL.setText("");
             
             enl(l);
         }catch(Exception e){}

@@ -63,10 +63,14 @@ public class AlterarLFXMLController implements Initializable {
     
     @FXML
     private void sAl(){
+        int dis = 1;
+        if( Integer.parseInt(qtdeLivro.getText()) <= 0){
+            dis = 0;
+        }
         try{
         contest conn = new contest();
         Statement sal = conn.conectar1().createStatement();
-        String in = "UPDATE `Livro` SET `nomeLivro`='"+tiLivro.getText()+"',`nomeAutor`='"+auLivro.getText()+"',`qtdeLivro`='"+qtdeLivro.getText()+"' WHERE livro.idLivro = '"+textPesquisa.getText()+"';";
+        String in = "UPDATE `Livro` SET `nomeLivro`='"+tiLivro.getText()+"',`nomeAutor`='"+auLivro.getText()+"',`qtdeLivro`='"+qtdeLivro.getText()+"', disponivel ='"+dis+"' WHERE livro.idLivro = '"+textPesquisa.getText()+"';";
         sal.executeUpdate(in);
         }catch(SQLException e){
             System.out.println(e);
@@ -76,6 +80,10 @@ public class AlterarLFXMLController implements Initializable {
             dialogoInfo.setHeaderText("Alteração Concluida");
             dialogoInfo.setContentText("Livro alterado com sucesso !!!");
             dialogoInfo.showAndWait();
+            textPesquisa.setText("");
+            tiLivro.setText("");
+            auLivro.setText("");
+            qtdeLivro.setText("");
         
     }
     @FXML
@@ -97,10 +105,10 @@ public class AlterarLFXMLController implements Initializable {
         String exl = "Delete from livro where idlivro = '"+textPesquisa.getText()+"';";
         exi.executeUpdate(exil);
         ex.executeUpdate(exl);
-        textPesquisa.setText(null);
-        tiLivro.setText(null);
-        auLivro.setText(null);
-        qtdeLivro.setText(null);
+        textPesquisa.setText("");
+        tiLivro.setText("");
+        auLivro.setText("");
+        qtdeLivro.setText("");
         }catch(SQLException e){
             System.out.println(e);
         }}});

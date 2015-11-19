@@ -18,9 +18,9 @@
          </font>
       </Label>
       <TextField fx:id="nomeAluno" layoutX="20.0" layoutY="117.0" promptText="Insira o nome do Aluno" />
-      <TextField fx:id="cpfAluno" layoutX="20.0" layoutY="161.0" promptText="Insira o C.P.F do Aluno" />
-      <TextField fx:id="matriculaAluno" layoutX="199.0" layoutY="117.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
-      <TextField fx:id="telefoneAluno" layoutX="197.0" layoutY="161.0" promptText="Telefone do Aluno" />
+      <util.MaskTextField fx:id="cpfAluno" layoutX="20.0" layoutY="161.0" promptText="Insira o C.P.F do Aluno" />
+      <util.MaskTextField fx:id="matriculaAluno" layoutX="199.0" layoutY="117.0" prefHeight="27.0" prefWidth="167.0" promptText="Matricula do Aluno" />
+      <util.MaskTextField fx:id="telefoneAluno" layoutX="197.0" layoutY="161.0" promptText="Telefone do Aluno" />
       <Label layoutX="20.0" layoutY="95.0" text="Nome do Aluno:" />
       <Label layoutX="20.0" layoutY="144.0" text="C.P.F do Aluno:" />
       <Label layoutX="200.0" layoutY="144.0" text="Telefone do Aluno:" />

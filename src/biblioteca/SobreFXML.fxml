@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.SobreFXMLController">
+   <children>
+      <ImageView fitHeight="143.0" fitWidth="182.0" layoutX="28.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Biblioteca.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" height="6.0" layoutY="138.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#0099ff" />
+                  <Stop color="#105e17" offset="0.4916387959866221" />
+                  <Stop color="#03ff18" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TextArea editable="false" layoutX="16.0" layoutY="152.0" prefHeight="201.0" prefWidth="569.0" text="Trabalho de Prática de Programação Orientada a Objetos desenvolvido pelos alunos:&#10;&#10;Lázaro Dutra, Jairo Sousa, Jocimar Machado,  Romildo Ferreira, Rodrigo Haueisen&#10;&#10;Professor : Fabiano Santos.&#10;&#10; Curso: Sistemas de Informação - 4º Período.&#10;&#10;Faculdade - Doctum &#10;&#10;Novembro,2015." />
+      <Button fx:id="ok" layoutX="283.0" layoutY="359.0" mnemonicParsing="false" onAction="#close" text="Ok" />
+   </children>
+</AnchorPane>

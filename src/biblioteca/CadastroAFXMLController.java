@@ -30,16 +30,22 @@ public class CadastroAFXMLController implements Initializable {
     @FXML
     private TextField nomeAluno;
     @FXML
-    private TextField cpfAluno;
+    private MaskTextField cpfAluno;
     @FXML
-    private TextField telefoneAluno;
+    private MaskTextField telefoneAluno;
     @FXML
-    private TextField matriculaAluno;
+    private MaskTextField matriculaAluno;
     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cpfAluno.setMask("NNN.NNN.NNN-NN");
+        cpfAluno.setPromptText("000-000-000-00");
+        telefoneAluno.setMask("NN-NNNN-NNNN");
+        telefoneAluno.setPromptText("00-0000-0000");
+        matriculaAluno.setMask("N!");
+        matriculaAluno.setPromptText("Insira a matrícula do aluno");
     }    
     
     @FXML
@@ -58,10 +64,10 @@ public class CadastroAFXMLController implements Initializable {
             dialogoInfo.setHeaderText("Cadastro concluido");
             dialogoInfo.setContentText("Aluno cadastrado com sucesso !!!");
             dialogoInfo.showAndWait();
-            nomeAluno.setText(null);
-            cpfAluno.setText(null);
-            telefoneAluno.setText(null);
-            matriculaAluno.setText(null);
+            nomeAluno.setText("");
+            cpfAluno.setText("");
+            telefoneAluno.setText("");
+            matriculaAluno.setText("");
             ena(a);
         }catch(NumberFormatException | SQLException e){}
     }

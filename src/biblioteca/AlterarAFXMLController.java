@@ -85,11 +85,11 @@ public class AlterarAFXMLController implements Initializable {
             dialogoInfo.setHeaderText("Alteração Concluida");
             dialogoInfo.setContentText("Aluno alterado com sucesso !!!");
             dialogoInfo.showAndWait();
-        mpAluno.setText(null);
-        mAluno.setText(null);
-        noAluno.setText(null);
-        nuCPF.setText(null);
-        teAluno.setText(null);
+        mpAluno.setText("");
+        mAluno.setText("");
+        noAluno.setText("");
+        nuCPF.setText("");
+        teAluno.setText("");
         
     }
     @FXML
@@ -119,11 +119,11 @@ public class AlterarAFXMLController implements Initializable {
         exiA.executeUpdate(exA);
         exrA.executeUpdate(exAr);
         ex.executeUpdate(exl);
-        mpAluno.setText(null);
-        mAluno.setText(null);
-        noAluno.setText(null);
-        nuCPF.setText(null);
-        teAluno.setText(null);
+        mpAluno.setText("");
+        mAluno.setText("");
+        noAluno.setText("");
+        nuCPF.setText("");
+        teAluno.setText("");
         }catch(SQLException e){
             System.out.println(e);
         }}});
